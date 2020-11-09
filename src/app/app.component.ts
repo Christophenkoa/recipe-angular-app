@@ -3,8 +3,15 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  // tslint:disable-next-line:object-literal-sort-keys
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'recepe-app';
+  public loadedFeature = 'recipe';
+
+  // tslint:disable-next-line:typedef
+  public onNavigate(feature: string) {
+    this.loadedFeature = feature;
+  }
+
 }
