@@ -11,7 +11,13 @@ export class RecipeService {
       'https://www.eatwell101.com/wp-content/uploads/2019/04/chicken-and-asparagus-skillet-recipe-2.jpg')
   ];
 
-  getRecipe(){
+  // tslint:disable-next-line:typedef
+  public getRecipes() {
     return this.recipes.slice();
+  }
+
+  // tslint:disable-next-line:typedef
+  public getRecipe(index: number) {
+    return this.recipes[index];
   }
 }
